@@ -1,8 +1,8 @@
 def gioi_thieu_ban_than():
-    ten = "Nguyễn Văn A"
-    tuoi = 25
-    nghe_nghiep = "Lập trình viên"
-    so_thich = ["đọc sách", "chơi game", "du lịch"]
+    ten = "Bùi Minh Hiếu"
+    nam sinh = 2004
+    nghe_nghiep = "Sinh viên"
+    so_thich = ["làm Toán", "chơi game", "du lịch"]
 
     print("Xin chào! Tôi tên là", ten)
     print("Tôi", tuoi, "tuổi và hiện đang làm việc với vai trò", nghe_nghiep + ".")
