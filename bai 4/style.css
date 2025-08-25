@@ -1,0 +1,35 @@
+h3{ color: orange; 
+}
+/* id sử dụng dấu #
+class sử dụng dấu . */
+
+#title {
+    background-color: aqua; 
+}
+
+.bg {
+    background-color: cadetblue;
+}
+p{
+    color: red;
+    background-color: blue;
+}
+/* phân tích ưu nhược điểm của 3 cách viết này:
+dùng inline style có thể tạo được nhiều nhưng sửa lại nhiều thì khó sửa
+dùng internal style có thể sửa được nhiều nhưng lại sử dụng từng trang một
+dùng external style có thể chỉ cần sửa một chỗ là sửa hết các trang  */
+.box1{
+    background-color: red;
+}
+.box2{
+    background-color: green;
+    /* truyền 1 gía trị: cách trên dưới
+    truyền 2 giá trị: cách trái phải */
+    /* truyền 4 giá trị đi theo chiều kim đồng hồ trên phải dứoi trái */
+
+   width: 50%;
+   margin:auto;
+}
+.box3{
+    background-color: orange;
+}
