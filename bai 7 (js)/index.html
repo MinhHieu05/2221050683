@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 JavaScript</title>
+    <!-- Trong JavaScript dung the script de lien ket -->
+</head>
+<body>
+    <script>
+        document.writeln("Hello World!"+ "<br>"); 
+        
+        let hoTen="Minh Hieu Bui" +"<br>";
+        // // co the su dung var or let de khai bao bien
+        // Cu phap: let ten bien = gia tri 
+        // De noi chuoi ta su dung +"<ten bien>";
+        document.writeln(hoTen); 
+        
+        let soThuNhat = 10; //Number
+        let soThuHai = "5"; //String
+        let ketQua = true;
+        // Phep cong +, Phep tru -, Phep nhan *, Phep chia /
+        // ketQua = soThuNhat / soThuHai;
+        // ketQua++;
+        // document.writeln(ketQua); 
+        // document.writeln(++ketQua);
+
+        // soThuNhat +=soThuHai; 
+        // co nghia la soThuNhat + soThuHai= soThuNhat va tuong tu voi - * / %: chia lay phan du
+        document.writeln(soThuNhat <= soThuHai);
+        //== != > < >= <= so sanh gia tri 
+        // === !=== so sanh gia tri va kieu du lieu
+        document.writeln(!ketQua); //!ketQua la phu dinh cua ket qua kieu boolean
+        
+         let thongTinSinhVien = {
+         hoTen: "Minh Hieu Bui",
+          mssv: "2221050683",
+          gioitinh: "true",
+            tuoi: "21",
+            lop: "Tin hoc Kinh Te 6704B",
+        }; 
+
+        let diaChi={
+            thanhPho: "Ha Noi",
+            phuong: "Thuong Cat",
+            duong: "Dong Ba",
+        }
+        thongTinSinhVien.diaChiNhaHieu=diaChi;
+        
+        document.writeln("Xin chao ban: " + thongTinSinhVien.hoTen +" " + thongTinSinhVien.mssv +" " + thongTinSinhVien.tuoi +" tuoi " +thongTinSinhVien.lop 
+            + " Nha o: " + thongTinSinhVien.diaChi.thanhPho );
+       
+        let namnay= 2025;
+        document.writeln("ban" + thongTinSinhVien.hoTen +" sinh nam " + (namnay - thongTinSinhVien.tuoi));
+        
+    </script>
+</body>
+
+</html>
