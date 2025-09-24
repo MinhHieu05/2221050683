@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 1</title>
+     <script src="script.js"> </script>;
+</head>
+<body>
+    <script>
+    let thongTinDonHang = {
+            maDonHang: "12345678",
+            thongTinKhachHang: {
+                hoTen: "MinhHieu",
+                soDienThoai: "0987654321",
+                trangThaiThanhVienThanThiet: false,
+                diemTichLuy: 0,
+            },
+            danhSachSanPham: {
+                sp01: {
+                    maSanPham: "1",
+                    tenSanPham: "Matcha",
+                    soLuong: 10,
+                    giaTien: "10000",
+                },
+                sp02: {
+                    maSanPham: "2",
+                    tenSanPham: "Cà phê",
+                    soLuong: 10,
+                    giaTien: "20000",
+                },
+                sp03: {
+                    maSanPham: "3",
+                    tenSanPham: "Trà sữa",
+                    soLuong: 15,
+                    giaTien: "20000",
+                }
+            },
+            thanhToanThanhCong: true,
+            diaChiGiaoHang: "Đông Ngạc"
+        }
+        let tongSP1 = thongTinDonHang.danhSachSanPham.sp01.giaTien * thongTinDonHang.danhSachSanPham.sp01.soLuong;
+        let tongSP2 = thongTinDonHang.danhSachSanPham.sp02.giaTien * thongTinDonHang.danhSachSanPham.sp02.soLuong;
+        let tongSP3 = thongTinDonHang.danhSachSanPham.sp03.giaTien * thongTinDonHang.danhSachSanPham.sp03.soLuong;
+        let tongTien = tongSP1 + tongSP2 + tongSP3;
+
+        document.writeln("Tong tien don hang = " + tongTien);
+        document.writeln("Do dai ma don hang = " + thongTinDonHang.maDonHang.length +"<br>"); //kiemtradodaichuoi
+
+        var mystring ="Hello Students";
+        document.writeln(mystring[0]); //tra ve ky tu dau tien vi xuat phat tu 0
+        document.writeln(mystring.slice(1,7)); //tra ve ky tu tu vi tri 1 den vi tri 7 khong bao gom vi tri 7
+
+        var mystring = "   Hello  Minh Hieu Bui   ";
+        document.writeln(mystring.replace( "Hello", "Hi") + "<br>"); //thay the chuoi Hello thanh Hi
+
+        document.writeln(mystring.toUpperCase() + "<br>"); //chuyen chuoi thanh chu in hoa
+        document.writeln(mystring.toLowerCase() + "<br>"); //chuyen chuoi thanh chu in thuong
+        document.writeln(mystring.trim() + "<br>"); //loai bo khoang trang o dau va cuoi chuoi
+
+        document.writeln(mystring.indexOf("a") + "<br>"); //tra ve vi tri dau tien (neu co tra ra vi tri, neu khong tra ra -1) cua chuoi Minh trong mystring
+        document.writeln(mystring.includes("a") + "<br>"); //tra ve true neu co chuoi "a" trong mystring, nguoc lai tra ve false
+
+        document.writeln(mystring.split('l') + "<br>"); //cat chuoi mystring tai cac vi tri co ky tu 'l' va tra ve dang mang, neu khong co ky tu tra dau , neu cach thi cu khoang trong thi thay dau ,
+        let danhsach =[
+            "Bui Minh Hieu",
+            "Nguyen Thi Van Anh",
+            "Luong Ngoc Bich",
+            "Duong Quang Tien"
+        ]
+        document.writeln(danhsach[1].startsWith("Nguyen") + "<br>"); //in ra mang va kiem tra phan tu dau tien co phai la Nguyen khong, neu dung tra ve true, sai tra ve false
+
+        //chuyen chuoi thanh so
+        let so="123";
+        document.writeln(typeof(so) + "<br>"); //tra ra string
+    
+        document.writeln(typeof(Number(so)) + "<br>"); //chuyen thanh number
+        var pi = 3.14159
+        document.writeln(pi.toFixed(2) +"<br>"); //lam tron 2 chu so thap phan
+        document.writeln(isNaN(pi) +"<br>"); //kiem tra pi co phai la so khong, neu khong phai tra ve true, neu la so tra ve false
+        document.writeln(isFinite(pi) +"<br>"); //kiem tra pi co phai la so huu han khong, neu la so huu han tra ve true, neu khong phai tra ve false
+
+        let toDay = new Date();
+        document.writeln((toDay) +"<br>"); //tra ve ngay thang hien tai
+        document.writeln(toDay.getFullYear() +"<br>"); //tra ve nam hien tai
+        document.writeln(toDay.getMonth() + 1 +"<br>"); //tra ve thang hien tai (thang bat dau tu 0 nen can +1)
+        document.writeln(toDay.getDate() +"<br>"); //tra ve ngay hien tai
+</script>
+    
+</body>
+</html>
