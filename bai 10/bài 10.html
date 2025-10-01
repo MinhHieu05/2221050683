@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 10</title>
+</head>
+<body>
+    <script>
+        //alert("Xin chao ban!");
+        // let result = confirm("Press a button");
+        // if(result == true){
+        //     document.writeln("You pressed OK! <br>");
+        // }else{
+        //     document.writeln("You pressed Cancel! <br>");
+        // }
+
+        // let result2 = prompt("Sometext", "default value"){
+        //     document.writeln(result2);
+        // };
+
+        // let toDay=new Date();
+        // let theDay= toDay.getDay();
+        // document.writeln(theDay);
+        // switch(theDay){
+        //     case 5:
+        //         document.writeln("Finally Friday");
+        //         break;
+        //     case 6:
+        //         document.writeln("Super Saturday");
+        //         break;  
+        //     case 0:
+        //         document.writeln("Sleepy Sunday");
+        //         break;
+        //         //neu khong co break thi se chay tiep cac cau lenh ben duoi den khi gap break hoac ket thuc switch
+        //     default:
+        //         document.writeln("I'm looking forward to the weekend");
+        //         break
+        // }
+        
+        // let arrNm=[1,2,3,4,5, 6];
+        // // for(let i=1; i<=1000; i++){
+        // //     document.writeln(i +" Anh xin loi <br>");
+        // // }
+        // document.writeln( arrNm[5]); //6
+        
+        // for(let j=0; j< arrNm.length; j++){
+        //     document.writeln(arrNm[j] +"<br>"); 
+        // }
+
+        // let danhsach =[
+        //     "Bui Minh Hieu",
+        //     "Nguyen Thi Van Anh",
+        //     "Luong Ngoc Bich",
+        //     "Duong Quang Tien",
+        //     "Nguyen Thanh Nam"
+        // ];
+        // document.writeln(danhsach.length + "<br>"); // tra ve gia tri 5 do dai cua mang
+        // for(let i=0; i< danhsach.length; i++){
+        //     document.writeln("Xin chao "+ danhsach[i] +"<br>"); 
+        // }   
+
+        // let i=0;
+        // while(i<=10){
+        //     document.writeln("The number is " +  i + "<br>");
+        //     i++;
+        // }
+        // do{
+        //     document.writeln("The number is " +  i + "<br>");
+        //     i++;
+        // }while(i<=10);
+
+        function sayHello(){
+            document.writeln("Hello");
+        }
+        sayHello(); //ham khong tham so;
+
+        function sayHello2(name, age){
+            document.writeln("Hello " + name + " " + age + " tuoi");
+        }
+
+        let name = prompt("Ten","Dien ten");
+        let age = prompt("Tuoi","Dien tuoi");
+
+        sayHello2(name, age); //ham co tham so;
+        
+
+         let so = prompt("Số cần điền là?", "Nhập số cần điền");
+        function check(so) {
+        
+            if (so % 2 === 0) {
+                document.writeln(so + " là số chẵn");
+            } 
+            
+            else {
+                document.writeln(so + " là số lẻ");
+            }
+        }
+        //so (abc) is not a number (ket qua: true)
+        if (!isNaN(so)) {
+            so = parseFloat(so);
+            check(so);
+        }
+        else{
+            document.writeln("Vui lòng nhập vào số");
+        }
+
+    </script>
+</body>
+</html>
