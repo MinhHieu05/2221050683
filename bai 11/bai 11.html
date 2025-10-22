@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+<body>
+    <h1>Bài 11</h1>
+<h2>Tính điểm sinh viên</h2>
+<!-- Tao ham JS tinh diem cua sinh vien dua vao 3 diem A,B,C. Biet tong diem =A*0.6+B*0.3+C*0.1 -->
+<div> Nhập điểm A:</div>
+<input type="number" id="diemA" placeholder="Nhập điểm A">
+
+<div>Nhập điểm B:</div>
+<input type="number" id="diemB" placeholder="Nhập điểm B">
+
+<div>Nhập điểm C:</div>
+<input type="number" id="diemC" placeholder="Nhập điểm C">
+
+<div>
+    <button onclick="xemKetQua()">Tính điểm</button>
+</div>
+
+<div>
+    Kết quả: <input type="text" id="ketQua" readonly>
+</div>
+
+<script>
+    function xemKetQua() {
+        let A = parseFloat(document.getElementById("diemA").value);
+        let B = parseFloat(document.getElementById("diemB").value);
+        let C = parseFloat(document.getElementById("diemC").value);
+
+        // kiem tra dieu kien
+        if (isNaN(A) || A < 0 || A > 10) {
+            document.writeln("Nhập lại điểm A <br>");
+            return;
+        }
+        if (isNaN(B) || B < 0 || B > 10) {
+            document.writeln("Nhập lại điểm B <br>");
+            return;
+        }
+        if (isNaN(C) || C < 0 || C > 10) {
+            document.writeln("Nhập lại điểm C <br>");
+            return;
+        }
+
+        let tongDiem = A * 0.6 + B * 0.3 + C * 0.1;
+        let hang;
+
+        if (tongDiem >= 9) {
+            hang = "A+";
+        } else if (tongDiem >= 8.5) {
+            hang = "A";
+        } else if (tongDiem >= 8) {
+            hang = "B+";
+        } else if (tongDiem >= 7) {
+            hang = "B";
+        } else if (tongDiem >= 6.5 ) {
+            hang = "C+";
+        } else if (tongDiem >= 5.5) {
+            hang = "C";
+        } else if (tongDiem >= 5) {
+            hang = "D+";
+        } else if (tongDiem >= 4) {
+            hang = "D";
+        } else {
+            hang = "F";
+        }
+
+       //tra ra ket qua
+        document.getElementById("ketQua").value = tongDiem.toFixed(2) + " - Hạng: " + hang;
+    }
+</script>
+
+</body>
+</html>
