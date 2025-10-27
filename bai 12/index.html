@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <h2> Ví dụ về bài tập đổi chế độ</h2>
+        <div class="anh">
+            <img src="https://cdn.pixabay.com/photo/2017/09/18/15/38/moon-2762111_1280.jpg" alt="Ảnh mặt trăng"
+                width="300" height="200">
+        </div>
+        <h2> Chế độ: Tối </h2>
+        <div>
+            <button onclick="doiCheDo()"> Đổi chế độ </button>
+        </div>
+    </div>
+    <script>
+        let cheDo = true; //dang boolean
+        function doiCheDo() {
+            if (cheDo == true) {
+                document.getElementsByTagName('body')[0].style = 'background-color: #fff';
+                document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ: Sáng';
+                document.getElementsByTagName('h2')[0].style = 'color: blue';
+                document.getElementsByTagName('h2')[1].style = 'color: blue';
+                document.getElementsByTagName('img')[0].src = 'https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/05/hinh-anh-mat-troi-18.jpg';
+                cheDo = false;
+            }
+            else {
+                document.getElementsByTagName('body')[0].style = 'background-color: black';
+                document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ: Tối';
+                document.getElementsByTagName('h2')[0].style = 'color: white';
+                document.getElementsByTagName('h2')[1].style = 'color: white';
+                document.getElementsByTagName('img')[0].src = 'https://cdn.pixabay.com/photo/2017/09/18/15/38/moon-2762111_1280.jpg';
+                cheDo = true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
